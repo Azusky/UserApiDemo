@@ -12,8 +12,10 @@ Uses MongoDB as Database
 ### Without Docker:
 to start the service, sent environment variables and run the app
 
+```
 export MONGODB_DATABASE=db42
 export MONGODB_HOSTNAME=localhost
-python app.py
+```
 
-run ``` python app.py ```
+
+``` python app.py ```
