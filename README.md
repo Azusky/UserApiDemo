@@ -10,16 +10,10 @@ Uses MongoDB as Database
 ``` docker compose up -d ``` (I hope this works :D)
 
 ### Without Docker:
-change the app.config
+to start the service, sent environment variables and run the app
 
-```
-app.config['MONGODB_SETTINGS'] = {
-    'db': os.environ['MONGODB_DATABASE'], <--- this
-    'host': os.environ['MONGODB_HOSTNAME'], <--- this
-    'port': 27017,
-    'username':os.environ.get('MONGODB_USERNAME'),
-    'password':os.environ.get('MONGODB_PASSWORD')
-}
+export MONGODB_DATABASE=db42
+export MONGODB_HOSTNAME=localhost
+python app.py
 
-```
 run ``` python app.py ```
